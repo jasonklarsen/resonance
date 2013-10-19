@@ -19,5 +19,3 @@ To start backend server:
 ```shell
 sbt server_finagle/run
 ```
-
-

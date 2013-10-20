@@ -1,6 +1,6 @@
 # Resonance #
 
-See http://larsen.io for background information.
+See http://larsen.io/resonance.html for background information.
 
 ## Project structure and proper documentation##
 

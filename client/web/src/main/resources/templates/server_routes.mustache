@@ -1,2 +1,9 @@
-// Modulize this later.
-var serviceRoute = "{{serviceRoute}}"
+'use strict';
+
+var resonanceRoutes = angular.module('resonance-routes', []);
+
+resonanceRoutes.factory('ServiceRoutes', function() {
+  return {
+    serviceRoute: "{{serviceRoute}}"
+  };
+});

@@ -1,5 +1,5 @@
 lazy val root = project.in( file("."))
-                       .aggregate(server_core, server_finagle)
+                       .aggregate(server_core, server_finagle, client_web)
 
 lazy val server_core = project.in( file("server/core"))
 

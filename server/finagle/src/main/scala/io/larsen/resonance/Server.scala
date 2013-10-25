@@ -16,7 +16,6 @@ object Server extends App {
   Await.ready(server)
 }
 
-
 class SimpleResponse extends Service[HttpRequest, HttpResponse] {
 	def apply(req: HttpRequest): Future[HttpResponse] = {
 		val response = new DefaultHttpResponse(req.getProtocolVersion, HttpResponseStatus.OK)

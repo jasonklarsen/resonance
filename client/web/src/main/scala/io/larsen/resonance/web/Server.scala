@@ -21,7 +21,7 @@ class SimpleFiles extends Controller {
   get("/") { request =>
     render.static("index.html").toFuture
   }
-  get("/serverRoutes.js") { request =>
+  get("/js/serverRoutes.js") { request =>
     render.view(new ServerRoutes).toFuture
   }
   get(":file") { request =>

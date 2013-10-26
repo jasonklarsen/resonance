@@ -1,4 +1,5 @@
 # Resonance #
+[![Build Status](https://travis-ci.org/jasonklarsen/resonance.png?branch=master)](https://travis-ci.org/jasonklarsen/resonance)
 
 See http://larsen.io/resonance.html for background information.
 

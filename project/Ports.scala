@@ -7,4 +7,6 @@ object Ports {
 
   javaOptions += "-DwebPort=" + webPort
   javaOptions += "-DresPort=" + resPort
+  javaOptions += "-DwebUrl=http://localhost:" + webPort
+  javaOptions += "-DresUrl=http://localhost:" + resPort
 }

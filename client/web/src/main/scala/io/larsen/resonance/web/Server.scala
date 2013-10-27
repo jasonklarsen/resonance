@@ -5,13 +5,12 @@ import com.twitter.finatra.ContentType._
 import java.lang.System.{getProperty, setProperty}
 
 object Server extends FinatraServer {
-  val resPort = getProperty("resPort")
   val webPort = getProperty("webPort")
 
   setProperty("com.twitter.finatra.config.port", ":" + webPort)
   setProperty("com.twitter.finatra.config.maxRequestSize", "1") // in MB
-//  setProperty("com.twitter.finatra.config.env", "production")
-  setProperty("com.twitter.finatra.config.templatePath", "templates")
+//  setProperty("com.twitter.finatra.config.env", "production") 
+  setProperty("com.twitter.finatra.config.templatePath", "/templates")
 
   val app = new SimpleFiles
   register(app)
@@ -42,9 +41,6 @@ class SimpleFiles extends Controller {
 }
 
 class ServerRoutes extends View {
-  val resDomain = getProperty("resDomain", "localhost")
-  val resPort = getProperty("resPort")
-
   val template = "server_routes.mustache"
-  val serviceRoute = "http://" + resDomain + ":" + resPort
+  val serviceRoute = getProperty("resUrl")
 }

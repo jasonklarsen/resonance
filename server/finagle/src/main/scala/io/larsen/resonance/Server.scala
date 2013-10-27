@@ -14,20 +14,16 @@ import java.lang.System.{getProperty, setProperty}
 object Server extends App {
   val resPort = getProperty("resPort")
   val service = (new HandleExceptions).andThen(new SimpleResponse)
-//  val server = Http.serve("localhost:" + resPort, service)
-val server  = ServerBuilder()
+  val server  = ServerBuilder()
       .codec(RichHttp[Request](Http()))
       .bindTo(new InetSocketAddress(resPort.toInt))
       .name("resonance-server-finagle")
       .build(service)
   println("**Starting the finagle resonance server**")
-//  Await.ready(server)
 }
 
 class SimpleResponse extends Service[Request, Response] {
 	def apply(req: Request): Future[Response] = {
-    println("**Building response**")
-
     Future.value {
       val sysTime = io.larsen.resonance.Core.sysTime
       val response = Response()
@@ -41,9 +37,7 @@ class SimpleResponse extends Service[Request, Response] {
 	}
 
   private def webAddress() = {
-    // Needs pulling out....
-    val webPort = getProperty("webPort")
-    "http://localhost:" + webPort
+    getProperty("webUrl")
   }
 }
 

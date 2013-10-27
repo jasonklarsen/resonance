@@ -26,7 +26,6 @@ javaOptions += ("-DresPort=" + resPort)
 
 //watchSources <+= sourceDirectory map { _ / "test" }
 
-
 //Jasmine stuff
 //seq(jasmineSettings : _*)
 

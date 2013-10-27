@@ -26,6 +26,7 @@ javaOptions += ("-DresPort=" + resPort)
 
 packageArchetype.java_application
 
+
 //watchSources <+= sourceDirectory map { _ / "test" }
 
 //Jasmine stuff

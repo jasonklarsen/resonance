@@ -13,6 +13,7 @@ object Server extends App {
   val resPort = getProperty("resPort")
   val service = (new HandleExceptions).andThen(new SimpleResponse)
   val server = Http.serve(":" + resPort, service)
+  println("**Starting the finagle resonance server**")
   Await.ready(server)
 }
 

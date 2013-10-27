@@ -26,19 +26,20 @@ javaOptions += ("-DresPort=" + resPort)
 
 //watchSources <+= sourceDirectory map { _ / "test" }
 
+
 //Jasmine stuff
-seq(jasmineSettings : _*)
+//seq(jasmineSettings : _*)
 
-appJsDir <+= sourceDirectory { src => src / "main" / "resources" / "public" / "js" }
+//appJsDir <+= sourceDirectory { src => src / "main" / "resources" / "public" / "js" }
 
-appJsLibDir <+= sourceDirectory { src => src / "main" / "resources" / "public" / "js" / "lib" }
+//appJsLibDir <+= sourceDirectory { src => src / "main" / "resources" / "public" / "js" / "lib" }
 
-jasmineTestDir <+= sourceDirectory { src => src / "test" / "resources" / "public" / "js"  }
+//jasmineTestDir <+= sourceDirectory { src => src / "test" / "resources" / "public" / "js"  }
 
-jasmineConfFile <+= sourceDirectory { src => src / "test" / "resources" / "public" / "js" / "test-dependencies.js" }
+//jasmineConfFile <+= sourceDirectory { src => src / "test" / "resources" / "public" / "js" / "test-dependencies.js" }
 
 //jasmineRequireJsFile <+= sourceDirectory { src => src / "main" / "resources" / "public" / "js" / "lib" / "require" / "require-2.0.6.js" }
 
 //jasmineRequireConfFile <+= sourceDirectory { src => src / "test" / "resources" / "public" / "js" / "require.conf.js" }
 
-(test in Test) <<= (test in Test) dependsOn (jasmine)
+//(test in Test) <<= (test in Test) dependsOn (jasmine)

@@ -29,6 +29,7 @@ class SimpleResponse extends Service[HttpRequest, HttpResponse] {
 	}
 
   private def webAddress() = {
+    // Needs pulling out....
     val webPort = getProperty("webPort")
     "http://localhost:" + webPort
   }

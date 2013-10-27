@@ -12,13 +12,14 @@ import java.lang.System.{getProperty, setProperty}
 object Server extends App {
   val resPort = getProperty("resPort")
   val service = (new HandleExceptions).andThen(new SimpleResponse)
-  val server = Http.serve(":" + resPort, service)
+  val server = Http.serve("localhost:" + resPort, service)
   println("**Starting the finagle resonance server**")
   Await.ready(server)
 }
 
 class SimpleResponse extends Service[HttpRequest, HttpResponse] {
 	def apply(req: HttpRequest): Future[HttpResponse] = {
+    println("**Building response**")
 		val response = new DefaultHttpResponse(req.getProtocolVersion, HttpResponseStatus.OK)
 		val sysTime = io.larsen.resonance.Core.sysTime
 

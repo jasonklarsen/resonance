@@ -38,14 +38,6 @@ class SimpleResponse extends Service[Request, Response] {
       response.content = copiedBuffer("{\"sysTime\":\"" + sysTime + "\"}", UTF_8)
       response
     }
-
-		// val response = new DefaultHttpResponse(req.getProtocolVersion, HttpResponseStatus.OK)
-
-		// response.setHeader("Access-Control-Allow-Origin", webAddress)
-		// response.setHeader("Access-Control-Allow-Headers", "X-Requested-With")
-		// response.setHeader("Access-Control-Allow-Methods", "GET, POST")
-		// response.setContent(copiedBuffer("{\"sysTime\":\"" + sysTime + "\"}", UTF_8))
-		// Future.value(response)
 	}
 
   private def webAddress() = {

@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/resonance-finagle -DresPort=$PORT $JAVA_OPTS

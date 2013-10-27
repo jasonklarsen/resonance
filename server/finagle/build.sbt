@@ -20,3 +20,4 @@ javaOptions += ("-DresPort=" + resPort)
 
 libraryDependencies ++= Seq(finagleHttp)
 
+packageArchetype.java_application

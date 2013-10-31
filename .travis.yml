@@ -6,13 +6,13 @@ deploy:
     api_key:
     - secure: "Aaqppfm2ae5zTh5nkzJVz7K1FxN3r+R7yn8kKPVNz6SFrTUdYIQlvUlFO6kzbnZqLaYk85rWbOXejP8CSs0fl3v1iWZolixgu0fYmh8zGbrJ11eLkQiOxY6oOOySTS+V77ceOGlc0QIfTY/mWk8FdFCcd9bgoG1eBrZ0mkOU/4k="
     app: resonance-client-web
-    buildpack: "https://github.com/jasonklarsen/heroku-buildpack-scala#client_web"
+    buildpack: "https://github.com/jasonklarsen/heroku-buildpack-scala.git#client_web"
     on: master
   - provider: heroku
     api_key:
     - secure: "Aaqppfm2ae5zTh5nkzJVz7K1FxN3r+R7yn8kKPVNz6SFrTUdYIQlvUlFO6kzbnZqLaYk85rWbOXejP8CSs0fl3v1iWZolixgu0fYmh8zGbrJ11eLkQiOxY6oOOySTS+V77ceOGlc0QIfTY/mWk8FdFCcd9bgoG1eBrZ0mkOU/4k="
     app: resonance-server-finagle
-    buildpack: "https://github.com/jasonklarsen/heroku-buildpack-scala#server_finagle"
+    buildpack: "https://github.com/jasonklarsen/heroku-buildpack-scala.git#server_finagle"
     on: master
 
 

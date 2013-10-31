@@ -1,3 +1,20 @@
 language: scala
 scala:
-   - 2.10.2
+- 2.10.2
+deploy:
+  - provider: heroku
+    api_key:
+#  - secure: P9BG7DGjD7SL4fAy+qwLhzmmZdyzgAx1+haOtU9aEfd3GhxGCWsAd3Vf5nFsGW1PTk52gtcw6UF/Npyc7/mAgnYMkImqcprrfIwJxKiXrclCtCcCF9yBZlwTOxYQMkR/wQ0ftumAXBHv/5gqyiMIc1xde2lv35iTlCMQUbuua64=
+    - secure: D+DXVG2XovPO6CaDVsk8Rrv21xZ2gGRAk35ASd7Azb/2+LSvwSCDqS894mzbnNuE8DdXfcBivlse5bmksGgFCmLapk5agSwxQJZAzDN1jItWTkGQ2JQYR3lkZ0oextw6Y026uWsrZXinpVZYfsGbVpxclVusiaI0bAekj7jlNUM=
+    app: resonance-client-web
+    buildpack: "https://github.com/jasonklarsen/heroku-buildpack-scala#client_web"
+    on: master
+  - provider: heroku
+    api_key:
+#  - secure: P9BG7DGjD7SL4fAy+qwLhzmmZdyzgAx1+haOtU9aEfd3GhxGCWsAd3Vf5nFsGW1PTk52gtcw6UF/Npyc7/mAgnYMkImqcprrfIwJxKiXrclCtCcCF9yBZlwTOxYQMkR/wQ0ftumAXBHv/5gqyiMIc1xde2lv35iTlCMQUbuua64=
+    - secure: D+DXVG2XovPO6CaDVsk8Rrv21xZ2gGRAk35ASd7Azb/2+LSvwSCDqS894mzbnNuE8DdXfcBivlse5bmksGgFCmLapk5agSwxQJZAzDN1jItWTkGQ2JQYR3lkZ0oextw6Y026uWsrZXinpVZYfsGbVpxclVusiaI0bAekj7jlNUM=
+    app: resonance-server-finagle
+    buildpack: "https://github.com/jasonklarsen/heroku-buildpack-scala#server_finagle"
+    on: master
+
+
